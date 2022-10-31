@@ -1,0 +1,19 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">Fake Shop</a>
+    <form class="d-flex" role="search">
+
+      <!-- <button routerLink="/buy" class="btn btn-outline-secondary" type="submit" (click)="onSelected(checkOutData)">Buy</button> -->
+    </form>
+  </div>
+</nav>
+
+
+
+<div *ngIf="buyArray" style="display: center;">
+  <h2>Congratulations for buying {{buyArray.length}} products</h2>
+  <h2>Your totalAmount is $ {{totalAmount}}</h2>
+</div>
+<button routerLink="/" type="submit" class="btn btn-sm btn-outline-primary" >home</button>
+
+<!-- <button type="button" (click)="handleBuy()">Display Price</button> -->

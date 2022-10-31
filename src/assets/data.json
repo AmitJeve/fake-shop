@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "price": 99,
+    "title": "Heading 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.",
+    "category": "Table"
+  },
+  {
+    "id": 2,
+    "price": 99.5,
+    "title": "Heading 2",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.",
+    "category": "Table"
+  },
+  {
+    "id": 3,
+    "price": 99.45,
+    "title": "Heading 3",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq",
+    "category": "Chair"
+  },
+  {
+    "id": 4,
+    "price": 99,
+    "title": "Heading 4",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq",
+    "category": "Chair"
+  }
+]

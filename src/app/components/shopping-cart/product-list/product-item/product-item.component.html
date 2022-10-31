@@ -1,0 +1,29 @@
+
+
+<div class="row" *ngIf="!isLoading">
+<div class="card mb-4 shadow-sm" *ngFor="let content of data">
+  <div class="card"  >
+  <img class="bd-placeholder-img card-img-top p-2" width="100%"
+    src="https://cdn.xxl.thumbs.canstockphoto.com/vector-realistic-wooden-table-on-awhite-background-drawing_csp4568079.jpg" />
+  </div>
+  <div class="card-body" >
+
+    <p class="card-title">
+      <strong>{{content.title}}</strong>
+     </p>
+    <p class="card-text">
+     <strong>{{ content.price | currency:'$' }}</strong>
+    </p>
+    <p class="card-text">{{content.description}}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-primary product-btn"
+        (click)="addToCart(content)"
+        >Add to Cart</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- <app-checkout [checkOutData]="checkOutData"></app-checkout> -->
