@@ -13,7 +13,7 @@ data:Data[]=[]
 checkOutData:Data[]=[]
 constructor(private dataservice :DataService, private http:HttpClient){}
 
-
+@Input() selectedCategory:string=''
 
 
   ngOnInit() {

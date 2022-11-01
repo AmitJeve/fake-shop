@@ -1,0 +1,17 @@
+.container{
+  text-align: center;
+  align-items: center;
+}
+
+
+.down{
+  position: relative;
+  margin:50px;
+  padding: 15px;
+  width: 15%;
+}
+
+/* .cong{
+  align-items: center;
+  margin-bottom: 50%;
+} */

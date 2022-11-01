@@ -1,7 +1,9 @@
+import { BuyService } from './../buy.service';
 import { Component, OnInit, Output, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Data } from 'src/assets/data-interface';
 import { DataService } from '../data.service';
+
 
 
 @Component({
@@ -16,7 +18,7 @@ export class CheckoutComponent implements OnInit{
   totalAmount:number = 0
   buyArray:Data[]=[]
 
-  constructor(private dataservice:DataService,private route : Router) {
+  constructor(private dataservice:DataService,private route : Router, private buyservice:BuyService) {
   }
 
   ngOnInit(){
@@ -31,6 +33,7 @@ export class CheckoutComponent implements OnInit{
   this.route.navigate(['/buy'])
 
   this.buyArray.push(arg)
+  this.buyservice.buyData= this.buyArray
   console.log(this.buyArray)
  }
 onSelect(){

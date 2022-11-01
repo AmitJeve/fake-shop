@@ -1,5 +1,5 @@
 
-<!-- <h1>Checkout Page</h1> -->
+
 <nav class="navbar bg-light">
   <div class="container-fluid">
     <a class="navbar-brand">Fake Shop</a>
@@ -9,28 +9,23 @@
     </form>
   </div>
 </nav>
-    <!-- <li *ngFor="let data of checkOutData">{{data.title}}</li> -->
 
-<!-- <button  type="button" (click)="displayData()">Display</button> -->
-<!-- <h1>CheckOut</h1>-->
+<div class="container">
 <div class="row">
     <div class="card" style="width: 300px;" *ngFor="let content of checkOutData">
-        <img src="https://cdn.xxl.thumbs.canstockphoto.com/vector-realistic-wooden-table-on-awhite-background-drawing_csp4568079.jpg">
+        <img src="assets\table.jpeg">
         <div class="card-body text-center align-items-center" >
             <h5 class="card-title">{{content.title}}</h5>
             <span>{{content.price | currency :'$'}} </span>
             <p class="card-text">{{content.description}}</p>
         </div>
-        <button  routerLink="/buy" type="button" class="btn btn-danger"(click)="onSelected(checkOutData)" >Buy</button>
+        <!-- <button  routerLink="/buy" type="button" class="btn btn-danger"(click)="onSelected(checkOutData)" >Buy</button> -->
 
     </div>
 
     </div>
-
+    <button  routerLink="/buy" type="button" class="btn btn-danger down"(click)="onSelected(checkOutData)" >Buy</button>
     <h2> Total Amount: ${{totalAmount}}</h2>
 
-    <!-- <h1>-----------------------Checkout End-------------------------</h1>
-    <button type="button" class="btn btn-danger" (click)="onSelect()">Total</button> -->
-
-    <!-- <app-buy  [buyArray]="buyArray"></app-buy> -->
+  </div>
 <router-outlet></router-outlet>

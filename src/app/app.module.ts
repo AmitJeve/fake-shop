@@ -1,3 +1,4 @@
+import { BuyService } from './buy.service';
 import { DataService } from './data.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -41,7 +42,8 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     HttpClientModule,
   ],
-  providers: [DataService],
+  providers: [DataService, BuyService],
+
   bootstrap: [AppComponent]
 
 })
