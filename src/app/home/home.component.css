@@ -1,1 +1,35 @@
 /* .card {display:inline-block;} */
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main{
+  overflow: hidden;
+  display: flex;
+
+}
+
+aside{
+  flex: 0 0 200px;
+
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content{
+  overflow: auto;
+
+}
+
+.columns{
+  display: flex;
+  gap:2rem;
+  flex-direction: row;
+}
+
