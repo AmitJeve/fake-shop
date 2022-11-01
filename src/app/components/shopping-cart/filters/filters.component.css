@@ -1,5 +1,42 @@
 .card{
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 200px;
+  max-width: 10em;
+  margin:auto;
+  height: 20em;
+  text-align: left;
+  margin-top: 3em;
+}
+
+a{
+  cursor: pointer;
+}
+
+
+
+p:active{
+  text-underline-offset: red;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:
+#0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

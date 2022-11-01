@@ -1,4 +1,4 @@
-/* .card {display:inline-block;} */
+/* .card {display:inline-block;}
 .container{
   display: flex;
   flex-direction: column;
@@ -9,13 +9,13 @@ main{
   overflow: hidden;
   display: flex;
 
-}
+} */
 
 /* aside{
   flex: 0 0 200px;
 
 } */
-
+/*
 article{
   display: flex;
   flex-direction: column;
@@ -29,7 +29,11 @@ article{
 
 .columns{
   display: flex;
-  gap:2rem;
-  flex-direction: row;
-}
 
+  flex-direction: row;
+} */
+
+/* gap:2rem; */
+.container{
+  margin-bottom: 10%;
+}

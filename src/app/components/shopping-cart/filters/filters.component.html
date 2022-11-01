@@ -1,6 +1,7 @@
-<div class="card">
-  <div class="card-body">
-    <div>
+<div class="row">
+  <div class="card">
+    <div *ngFor="let category of categories">
+      <a (click)="categoriesProduct(category)"><p class="hover-underline-animation">{{category}}</p></a>
       <!-- <h4>
         All categories
       </h4>
@@ -10,12 +11,17 @@
 
       </h6> -->
 
-      <ul *ngFor="let category of categories">
+      <!-- <ul *ngFor="let category of categories">
         <a (click)="categoriesProduct(category)"><li class="active">{{category}}</li></a>
 
-      </ul>
+      </ul> -->
     </div>
 
   </div>
+
+
+
+<div class="col">
+  <app-product-item [selectedCategory]="categorySelected"></app-product-item>
 </div>
-<app-product-item [selectedCategory]="categorySelected"></app-product-item>
+</div>
