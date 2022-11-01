@@ -1,7 +1,7 @@
 
-
 <div class="row" *ngIf="!isLoading">
 <div class="card mb-4 shadow-sm" *ngFor="let content of data">
+  <div *ngIf="selectedCategory ===content.category || selectedCategory ==='All Categories' || selectedCategory === '';">
   <div class="card" >
   <img class="bd-placeholder-img card-img-top p-2" width="100%"
     src="assets\table.jpeg" />
@@ -26,4 +26,5 @@
   </div>
 </div>
 </div>
-<!-- <app-checkout [checkOutData]="checkOutData"></app-checkout> -->
+</div>
+

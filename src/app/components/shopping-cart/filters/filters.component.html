@@ -1,16 +1,21 @@
 <div class="card">
   <div class="card-body">
     <div>
-      <h4>
+      <!-- <h4>
         All categories
       </h4>
       <h6>Tables
       </h6>
       <h6>Chairs
 
-      </h6>
+      </h6> -->
+
+      <ul *ngFor="let category of categories">
+        <a (click)="categoriesProduct(category)"><li class="active">{{category}}</li></a>
+
+      </ul>
     </div>
 
   </div>
 </div>
-
+<app-product-item [selectedCategory]="categorySelected"></app-product-item>
