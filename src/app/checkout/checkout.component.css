@@ -1,4 +1,6 @@
-
+.navbar-brand{
+  font-size: x-large;
+}
 
 .down{
   position: relative;
@@ -10,4 +12,9 @@
 
 .container{
   text-align: center;
+}
+
+.card{
+  border: 1px solid black;
+  margin: 10px;
 }

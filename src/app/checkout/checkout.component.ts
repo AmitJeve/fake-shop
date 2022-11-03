@@ -16,28 +16,62 @@ import { DataService } from '../data.service';
 export class CheckoutComponent implements OnInit{
   checkOutData:Data[]=[]
   totalAmount:number = 0
-  buyArray:Data[]=[]
+  buyArray:any=[]
+  buyActive:Boolean=true
+  checkedData:any=[]
+  isValueChecked:boolean = true
+  uniqueIds:any=[]
+  i:number=0
+  j:number=0
 
   constructor(private dataservice:DataService,private route : Router, private buyservice:BuyService) {
   }
 
   ngOnInit(){
        this.checkOutData = this.dataservice.checkOutData
-      for(let i=0;i<this.checkOutData.length;i++){
-        this.totalAmount = this.totalAmount + this.checkOutData[i].price
-      }
+
   }
+
+
+    isChecked(arg:any){
+console.log(this.i)
+      if(this.isValueChecked){
+        this.buyActive=true;
+        this.buyArray.push(arg)
+        console.log(this.buyArray)
+
+        for(;this.i<this.buyArray.length;this.i++){
+          this.totalAmount= this.totalAmount + this.buyArray[this.i].price
+        }
+        console.log(this.i)
+        this.buyservice.buyData= this.buyArray
+      }
+
+      if(!this.isValueChecked){
+        this.i=0
+        const id= arg.id
+        const indexfin  = this.buyArray.findIndex((e:any)=>{
+          if(e.id === id){
+            return id;
+          }
+        })
+        if(indexfin !=-1){
+          this.totalAmount = this.totalAmount - this.buyservice.buyData[indexfin].price
+          console.log('Unchecked',indexfin)
+        }
+
+        this.buyArray.splice(indexfin,1)
+        this.buyservice.buyData = this.buyArray
+        console.log(this.buyservice.buyData)
+
+      }
+    }
+
  onSelected(arg:any){
-  // console.log(arg)
-  console.log(this.checkOutData)
+
   this.route.navigate(['/buy'])
 
-  this.buyArray.push(arg)
-  this.buyservice.buyData= this.buyArray
-  console.log(this.buyArray)
+
  }
-onSelect(){
-  console.log(this.checkOutData)
 }
 
-}

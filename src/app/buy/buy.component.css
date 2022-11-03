@@ -1,17 +1,15 @@
 .container{
   text-align: center;
   align-items: center;
+  padding-top: 15%;
 }
 
 
-.down{
-  position: relative;
-  margin:50px;
-  padding: 15px;
-  width: 15%;
+.navbar-brand{
+  font-size: x-large;
 }
 
-/* .cong{
-  align-items: center;
-  margin-bottom: 50%;
-} */
+.btn{
+ margin: 5%;
+ padding: 1%;
+}

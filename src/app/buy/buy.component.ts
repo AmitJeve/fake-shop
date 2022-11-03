@@ -11,7 +11,7 @@ import { Component, DoCheck, Input, OnChanges, OnInit, Output } from '@angular/c
 })
 export class BuyComponent implements DoCheck, OnInit {
 buyArray:any=[]
-
+lenOfbuyArray:number=0
 totalAmount:number=0
 i:number=0
 constructor(private buyService: BuyService,private route:Router){}
@@ -20,13 +20,11 @@ ngOnInit() {
 }
 
   ngDoCheck(){
-  for(let data of this.buyArray){
-    for(;this.i<data.length;this.i++){
-    this.totalAmount = this.totalAmount + data[this.i].price
-  }
-}
-  // console.log(this.totalAmount)
-  // console.log(this.buyArray.length)
+    console.log(this.buyArray)
+    this.lenOfbuyArray = this.buyArray.length
+     for(;this.i<this.buyArray.length;this.i++){
+    this.totalAmount = this.totalAmount + this.buyArray[this.i].price
 }
 
+}
 }

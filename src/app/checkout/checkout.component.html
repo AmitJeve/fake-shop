@@ -18,14 +18,14 @@
             <h5 class="card-title">{{content.title}}</h5>
             <span>{{content.price | currency :'$'}} </span>
             <p class="card-text">{{content.description}}</p>
-            <input type="checkbox" checked>
+            <input type="checkbox" [(ngModel)]="isValueChecked != isValueChecked" (change)="isChecked(content)" checked>
         </div>
 
 
     </div>
 
     </div>
-    <button type="button" class="btn btn-danger down"(click)="onSelected(checkOutData)" >Buy</button>
+    <button type="button" class="btn btn-outline-danger down"(click)="onSelected(checkOutData)" >Buy</button>
     <h2> Total Amount: ${{totalAmount}}</h2>
 
   </div>
