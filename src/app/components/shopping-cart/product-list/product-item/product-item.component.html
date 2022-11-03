@@ -1,6 +1,7 @@
 
 <div class="row" *ngIf="!isLoading">
-<div class="col-5" *ngFor="let content of data">
+<div class="col-md-5" *ngFor="let content of data">
+  <div class="card polaroid">
   <div *ngIf="selectedCategory ===content.category || selectedCategory ==='All Categories' || selectedCategory === '';">
   <div class="card" >
   <img class="bd-placeholder-img" width="100%"
@@ -16,14 +17,15 @@
     </p>
     <p class="card-text">{{content.description}}</p>
     <div class="d-flex justify-content-between align-items-center">
-      <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-primary product-btn"
+      <div class=" mx-auto justify-content-center ">
+        <button type="button" class="btn btn-sm btn-primary"
         (click)="addToCart(content)"
         >Add to Cart</button>
 
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 </div>

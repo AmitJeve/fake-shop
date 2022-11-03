@@ -5,7 +5,7 @@
     <a class="navbar-brand">Fake Shop</a>
     <form class="d-flex" role="search">
 
-      <button routerLink="/buy" class="btn btn-outline-secondary" type="submit" (click)="onSelected(checkOutData)">Buy</button>
+      <button  class="btn btn-outline-secondary" type="submit" (click)="onSelected(checkOutData)">Buy</button>
     </form>
   </div>
 </nav>
@@ -18,13 +18,14 @@
             <h5 class="card-title">{{content.title}}</h5>
             <span>{{content.price | currency :'$'}} </span>
             <p class="card-text">{{content.description}}</p>
+            <input type="checkbox" checked>
         </div>
-        <!-- <button  routerLink="/buy" type="button" class="btn btn-danger"(click)="onSelected(checkOutData)" >Buy</button> -->
+
 
     </div>
 
     </div>
-    <button  routerLink="/buy" type="button" class="btn btn-danger down"(click)="onSelected(checkOutData)" >Buy</button>
+    <button type="button" class="btn btn-danger down"(click)="onSelected(checkOutData)" >Buy</button>
     <h2> Total Amount: ${{totalAmount}}</h2>
 
   </div>
