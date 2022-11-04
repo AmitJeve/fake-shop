@@ -25,6 +25,7 @@ export class CheckoutComponent implements OnInit{
   ngOnInit(){
        this.checkOutData = this.dataservice.checkOutData
        this.buyArray = this.checkOutData
+       this.buyservice.buyData= this.buyArray
        this.updateTotal()
   }
 

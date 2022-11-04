@@ -17,7 +17,7 @@ public getData():Observable<Data[]>{
 }
   set checkOutData(arg){
      this._checkOutData = arg
-    // console.log(this._checkOutData)
+
   }
 
   get checkOutData(){
