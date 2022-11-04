@@ -1,9 +1,6 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { BuyService } from './../buy.service';
 
-
-
-
 @Component({
   selector: 'app-buy',
   templateUrl: './buy.component.html',
