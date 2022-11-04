@@ -1,7 +1,7 @@
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { BuyService } from './../buy.service';
-import { Router } from '@angular/router';
 
-import { Component, DoCheck, Input, OnChanges, OnInit, Output } from '@angular/core';
+
 
 
 @Component({
@@ -14,12 +14,13 @@ buyArray:any=[]
 lenOfbuyArray:number=0
 totalAmount:number=0
 i:number=0
-constructor(private buyService: BuyService,private route:Router){}
+constructor(private buyService: BuyService){}
 ngOnInit() {
-    this.buyArray= this.buyService.buyData
+
 }
 
   ngDoCheck(){
+    this.buyArray= this.buyService.buyData
     console.log(this.buyArray)
     this.lenOfbuyArray = this.buyArray.length
      for(;this.i<this.buyArray.length;this.i++){

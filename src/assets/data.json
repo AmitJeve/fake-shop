@@ -8,21 +8,21 @@
   },
   {
     "id": 2,
-    "price": 99.5,
+    "price": 95,
     "title": "Heading 2",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq.",
     "category": "Table"
   },
   {
     "id": 3,
-    "price": 99.45,
+    "price": 96,
     "title": "Heading 3",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq",
     "category": "Chair"
   },
   {
     "id": 4,
-    "price": 99.8,
+    "price": 97,
     "title": "Heading 4",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliq",
     "category": "Chair"

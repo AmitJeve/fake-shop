@@ -18,7 +18,7 @@
             <h5 class="card-title">{{content.title}}</h5>
             <span>{{content.price | currency :'$'}} </span>
             <p class="card-text">{{content.description}}</p>
-            <input type="checkbox" [(ngModel)]="isValueChecked != isValueChecked" (change)="isChecked(content)" checked>
+            <input type="checkbox" [(ngModel)]="isValueChecked != isValueChecked" (change)="isChecked(content)">
         </div>
 
 
