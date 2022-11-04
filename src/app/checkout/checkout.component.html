@@ -1,5 +1,4 @@
 
-
 <nav class="navbar bg-light">
   <div class="container-fluid">
     <a class="navbar-brand">Fake Shop</a>
@@ -10,6 +9,8 @@
   </div>
 </nav>
 
+
+
 <div class="container">
 <div class="row">
     <div class="card" style="width: 300px;" *ngFor="let content of checkOutData">
@@ -18,7 +19,7 @@
             <h5 class="card-title">{{content.title}}</h5>
             <span>{{content.price | currency :'$'}} </span>
             <p class="card-text">{{content.description}}</p>
-            <input type="checkbox" [(ngModel)]="isValueChecked != isValueChecked" (change)="isChecked(content)">
+            <input type="checkbox" [ngModel]="isValueChecked" (change)="isChecked(content, $event)">
         </div>
 
 
